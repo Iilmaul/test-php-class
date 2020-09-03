@@ -2,11 +2,8 @@
   class balok{
     var $panjang;
     var $lebar;
-    var $tinggi;
-    function setNilai($pan,$leb,$ting){
-      $this->panjang=$pan;
-      $this->lebar=$leb;
-      $this->tinggi=$ting;
+    var $tinggi; 
+    
     }
     function volume():void{
     $vol=$this->panjang*$this->lebar*$this->tinggi;
@@ -15,16 +12,12 @@
     }
   }
   $kotak1 = new balok();
-  $p;
-  $l;
-  $t;
   echo"masukan panjang : ";
-  $p = trim(fgets(STDIN));
+  $kotak1->panjang = trim(fgets(STDIN));
   echo "masukan tinggi : ";
-  $t = trim(fgets(STDIN));
+  $kotak1->tinggi = trim(fgets(STDIN));
   echo "masukan lebar : ";
-  $l = trim(fgets(STDIN));
-  $kotak1->setNilai($p,$l,$t);
+  $kotak1->lebar= trim(fgets(STDIN));
   $kotak1->volume();
   ?>
   //Ini menggunakan php cli, di debug dengan xdebug error akan tetapi menggunakan debuger online (-repl) itu berhasil dan tidak error
